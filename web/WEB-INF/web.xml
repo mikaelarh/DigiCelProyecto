@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>FrontControllerServelet</servlet-name>
+        <servlet-class>servelets.FrontControllerServelet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FrontControllerServelet</servlet-name>
+        <url-pattern>/FrontController</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>IP</param-name>
+        <param-value>127.0.0.1:3306</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BD</param-name>
+        <param-value>microtienda</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BD_2</param-name>
+        <param-value>logdatabase</param-value>
+    </context-param>
+    <context-param>
+        <param-name>USUARIO</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>PASS</param-name>
+        <param-value></param-value>
+    </context-param>
+    <error-page>
+        <location>/error404.jsp</location>
+    </error-page>
+</web-app>
